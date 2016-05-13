@@ -4,7 +4,7 @@ $c = mysqli_connect("localhost","root","","robotics");
 if (!isset($_GET["pg"])) {
 	$_GET["pg"] = "home";
 }
-else if (!in_array($_GET["pg"],Array("home","account","contact","events","forum","about"))) {
+else if (!in_array($_GET["pg"],Array("home","account","contact","events","forum","about", "gallery"))) {
 	$_GET["pg"] = "error";
 }
 ?>
