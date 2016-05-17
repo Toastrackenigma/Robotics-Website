@@ -13,6 +13,10 @@ body {
 	position:fixed;
 	left:0;
 	top:0;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
 	overflow:hidden;
 	animation:header 0.5s ease-in;
 }
@@ -38,6 +42,11 @@ body {
 #header li:hover {
 	background-color:#e67e22;
 }
+.right {
+	float:right !important;
+	border-left:solid 1px #ffffff;
+	border-right-style:none !important;
+}
 @keyframes header {
 	0% {
 		height:0px;
@@ -52,5 +61,58 @@ body {
 	}
 	100% {
 		opacity:1;
+	}
+}
+#login {
+	width:300px;
+	height:300px;
+	position:fixed;
+	padding:5px;
+	box-sizing:border-box;
+	right:10px;
+	top:60px;
+	display:none;
+	border-bottom:solid 10px #bdc3c7;
+	border-radius:5px;
+	background-color:#dddddd;
+}
+#login:before {
+	position:absolute;
+	content:"";
+	right:50px;
+	top:-30px;
+	width:0px;
+	height:0px;
+	border:solid 15px transparent;
+	border-bottom-color:#dddddd;
+}
+.link, a {
+	text-decoration:none;
+	border-bottom:dotted 1px #000000;
+	cursor:pointer;
+	color:#111111;
+}
+.link:hover, a:hover {
+	color:#e67e22;
+}
+#ajax {
+	display:none;
+}
+input[type="text"], input[type="password"] {
+	border:solid 1px #000000;
+	font-family:open sans;
+	outline:none;
+	cursor:pointer;
+	padding:2.5px;
+}
+input[type="text"]:focus, input[type="password"]:focus {
+	border-color:#e67e22;
+}
+@keyframes err {
+	0% {
+		background-color:#e67e22;
+	}
+	100% {
+		background-color:#dddddd;
 	}
 }
